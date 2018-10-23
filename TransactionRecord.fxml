@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="585.0" prefWidth="1001.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkgfinal.project.TransactionRecordController">
+    <stylesheets>
+        <URL value="@decorate.css" />
+    </stylesheets>
+    <children>
+      <ImageView fitHeight="533.0" fitWidth="1012.0" layoutX="-1.0" layoutY="28.0" opacity="0.38" pickOnBounds="true">
+         <image>
+            <Image url="@rent.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="rect1" arcHeight="5.0" arcWidth="5.0" fill="#1fdabe" height="450.0" layoutX="224.0" layoutY="55.0" opacity="0.82" stroke="#2dbc98" strokeType="INSIDE" width="452.0" />
+      <TextField fx:id="fname" alignment="TOP_CENTER" layoutX="330.0" layoutY="115.0" opacity="0.66" prefHeight="17.0" prefWidth="214.0" promptText="Customer's First Name" />
+      <TextField fx:id="lname" alignment="TOP_CENTER" layoutX="330.0" layoutY="146.0" opacity="0.66" prefHeight="25.0" prefWidth="214.0" promptText="Customer's Last Name" />
+      <TextField fx:id="phoneNumber" alignment="TOP_CENTER" layoutX="330.0" layoutY="177.0" opacity="0.66" prefHeight="25.0" prefWidth="214.0" promptText="Phone Number" />
+      <TextField fx:id="address" alignment="TOP_CENTER" layoutX="331.0" layoutY="207.0" opacity="0.66" prefHeight="25.0" prefWidth="214.0" promptText="Address" />
+      <DatePicker fx:id="tdate" layoutX="334.0" layoutY="433.0" opacity="0.78" prefHeight="25.0" prefWidth="100.0" promptText="Date Taken" />
+      <Label fx:id="header_label1" alignment="CENTER" layoutX="277.0" layoutY="55.0" prefHeight="47.0" prefWidth="331.0" text="Record Transations">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Button layoutX="340.0" layoutY="467.0" mnemonicParsing="false" onAction="#record" opacity="0.82" prefHeight="25.0" prefWidth="195.0" text="Complete" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="540.0" layoutX="-1.0" layoutY="22.0" strokeType="INSIDE" width="200.0">
+         <fill>
+            <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="3.469446951953614E-17" startX="0.519047619047619" startY="0.8238095238095238">
+               <stops>
+                  <Stop color="#19e0e0" />
+                  <Stop color="#19e0e0" offset="0.007662835249042145" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#15cde5" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="25.0" layoutX="-1.0" layoutY="560.0" stroke="#a61e1e00" strokeType="INSIDE" width="1012.0">
+         <fill>
+            <LinearGradient endX="1.0" startX="1.0" startY="0.38095238095238093">
+               <stops>
+                  <Stop color="#19e0e0" />
+                  <Stop color="#19e0e0" offset="0.007662835249042145" />
+                  <Stop color="#1f99a600" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <MenuBar prefHeight="29.0" prefWidth="1012.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#homepage" text="Homepage" />
+                  <MenuItem mnemonicParsing="false" onAction="#Exit" text="Close" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Find">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label fx:id="staff" layoutX="789.0" layoutY="39.0" prefHeight="32.0" prefWidth="79.0" text="Staff:">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Text fx:id="staff_name" layoutX="850.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="121.13671636581421">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Button fx:id="recordT" layoutX="-1.0" layoutY="79.0" mnemonicParsing="false" onAction="#display_Record_form" prefHeight="25.0" prefWidth="200.0" text="Record Transaction" />
+      <Button layoutX="-1.0" layoutY="111.0" mnemonicParsing="false" onAction="#display_AvailableItemForm" prefHeight="25.0" prefWidth="200.0" text="Stock Details" />
+      <Button layoutX="-1.0" layoutY="141.0" mnemonicParsing="false" onAction="#ShowTransactions" prefHeight="25.0" prefWidth="200.0" text="Transactions" />
+      <Button layoutX="-1.0" layoutY="172.0" mnemonicParsing="false" onAction="#customer_details" prefHeight="25.0" prefWidth="200.0" text="Customer Details" />
+      <Button fx:id="btn_select_item" layoutX="335.0" layoutY="239.0" mnemonicParsing="false" onAction="#select_item" prefHeight="29.0" prefWidth="207.0" text="Select Item(s) To Hire" />
+      <ScrollPane fx:id="item_sp" layoutX="346.0" layoutY="268.0" opacity="0.87" visible="false">
+         <content>
+            <VBox fx:id="items_to_hire_display" prefHeight="160.0" prefWidth="183.0" />
+         </content>
+      </ScrollPane>
+      <DatePicker fx:id="ddate" layoutX="439.0" layoutY="433.0" opacity="0.78" prefHeight="25.0" prefWidth="100.0" promptText="Date Due" />
+      <ScrollPane fx:id="nAvailPane" layoutX="561.0" layoutY="248.0" opacity="0.73" visible="false">
+         <content>
+            <TextArea fx:id="Quantity_not" editable="false" opacity="0.71" prefHeight="200.0" prefWidth="200.0" wrapText="true">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </TextArea>
+         </content>
+      </ScrollPane>
+      <Button fx:id="btn_ok" layoutX="689.0" layoutY="220.0" mnemonicParsing="false" onAction="#Ok" text="Ok" visible="false" />
+      
+   </children>
+</AnchorPane>

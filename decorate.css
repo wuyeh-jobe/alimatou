@@ -1,0 +1,50 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 11, 2017, 9:25:37 PM
+    Author     : Wuyeh Jobe
+*/
+
+Button:hover{
+    -fx-background-color: #25c6ac/*ab1e1e*/;
+    -fx-font-family: "Century Gothic";
+    -fx-text-fill: #dcedc8
+}
+
+
+#logorect{
+    -fx-background-radius: 15;
+    -fx-background-image:url("logo.PNG");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 140px;
+    -fx-border-radius: 15;
+    -fx-border-width:5;
+    -fx-border-color:white;
+}
+#clock{
+    -fx-border-color:aqua;
+}
+#quote_rect{
+     -fx-border-color:aqua;
+}
+
+#recordT,#transaction,#stock,#customerD{
+    -fx-background-color: #25c6ac;
+    -fx-font-family: "Century Gothic";
+    -fx-text-fill: whitesmoke
+}
+Button{
+    -fx-background-color:aquamarine;
+    -fx-text-fill: whitesmoke;
+    -fx-border-color: white;
+    -fx-font: 15px sans-serif;
+    -fx-border-radius: 5px;
+    -fx-font-weight:bold;
+}
+#btn_ok,#yes_btn,#no_btn{
+    -fx-background-color:#cc0000;
+    -fx-font: 10px sans-serif;
+}

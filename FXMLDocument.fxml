@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="1012.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkgfinal.project.FXMLDocumentController">
+    <stylesheets>
+        <URL value="@decorate.css" />
+    </stylesheets>
+    <children>
+      <ImageView fitHeight="72.0" fitWidth="266.0" layoutX="747.0" layoutY="488.0" opacity="0.44" pickOnBounds="true">
+         <image>
+            <Image url="@Gambia.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" height="463.0" layoutX="746.0" layoutY="26.0" opacity="0.5" stroke="#75865c" strokeType="INSIDE" width="266.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#19e0b9" />
+                  <Stop color="#ddde18" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <TextArea fx:id="clock" editable="false" layoutX="17.0" layoutY="191.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="283.0" prefWidth="698.0" wrapText="true" AnchorPane.bottomAnchor="109.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="297.0" AnchorPane.topAnchor="191.0">
+         <font>
+            <Font name="System Bold" size="96.0" />
+         </font>
+      </TextArea>
+      <Rectangle fx:id="quote_rect" arcHeight="10.0" arcWidth="10.0" fill="#24b9d0b0" height="53.0" layoutX="79.0" layoutY="447.0" stroke="#32c7cf" strokeType="INSIDE" width="566.0" />
+      <ImageView fx:id="circ1" fitHeight="540.0" fitWidth="751.0" layoutX="-4.0" layoutY="25.0" opacity="0.56" pickOnBounds="true">
+         <image>
+            <Image url="@resort.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutY="-3.0" prefHeight="29.0" prefWidth="1012.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#Exit" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Find">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="txt_username" alignment="TOP_CENTER" layoutX="765.0" layoutY="113.0" opacity="0.66" prefHeight="31.0" prefWidth="214.0" promptText="Username">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="txt_password" alignment="TOP_CENTER" layoutX="765.0" layoutY="151.0" onMousePressed="#when_start" opacity="0.66" prefHeight="25.0" prefWidth="214.0" promptText="Password">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="btn_logIn" layoutX="775.0" layoutY="192.0" mnemonicParsing="false" onAction="#log_in" prefHeight="36.0" prefWidth="195.0" text="Log in">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_forgotPassword" layoutX="778.0" layoutY="240.0" mnemonicParsing="false" onAction="#forgetPassword" prefHeight="25.0" prefWidth="189.0" text="Forgot Password?" textFill="#ab1e1e">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="header_label" alignment="CENTER" layoutX="742.0" layoutY="26.0" prefHeight="47.0" prefWidth="266.0" text="Staff Log In">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+
+      <Text fx:id="Companyname" fill="#36888f" layoutX="124.0" layoutY="140.0" stroke="#1eb2b1" strokeType="OUTSIDE" strokeWidth="0.0" text="Alimatou Enterprise" textAlignment="CENTER" wrappingWidth="484.68359142541885">
+         <font>
+            <Font size="54.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="logo" fitHeight="106.0" fitWidth="107.0" layoutX="19.0" layoutY="66.0" pickOnBounds="true">
+         <image>
+            <Image url="@logo.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="logo1" cache="true" fitHeight="106.0" fitWidth="107.0" layoutX="608.0" layoutY="71.0" pickOnBounds="true">
+         <image>
+            <Image url="@logo.PNG" />
+         </image>
+      </ImageView>
+      <Text fill="#282020" layoutX="115.0" layoutY="489.0" stroke="#31395e" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;It's time to defy the odds&quot;" textAlignment="CENTER" wrappingWidth="493.68359375">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+      <Text fx:id="txt_date" fill="#3b7966" layoutX="458.0" layoutY="386.0" opacity="0.73" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="189.00000071525574">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="25.0" layoutY="557.0" stroke="#a61e1e00" strokeType="INSIDE" width="1012.0">
+         <fill>
+            <LinearGradient endX="1.0" startX="1.0" startY="0.38095238095238093">
+               <stops>
+                  <Stop color="#19e0e0" />
+                  <Stop color="#19e0e0" offset="0.007662835249042145" />
+                  <Stop color="#1f99a600" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Text fx:id="error_display" fill="#d01c1c" layoutX="778.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="188.99998793005943">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Text>
+      <VBox fx:id="edit_vbox" layoutX="751.0" layoutY="281.0" opacity="0.66" prefHeight="200.0" prefWidth="255.0" visible="false">
+         <children>
+            <Text fx:id="edit_header" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Details" textAlignment="CENTER" wrappingWidth="257.13671875">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <TextField fx:id="name_edit" alignment="TOP_CENTER" />
+            <TextField fx:id="surname_edit" alignment="TOP_CENTER" />
+            <TextField fx:id="username_edit" alignment="TOP_CENTER" />
+            <TextField fx:id="secuirityq_edit" alignment="TOP_CENTER" />
+            <TextField fx:id="secuirityA_edit" alignment="TOP_CENTER" />
+            <PasswordField fx:id="password_edit" alignment="TOP_CENTER" />
+            <Button mnemonicParsing="false" onAction="#Done_Editing" prefHeight="29.0" prefWidth="262.0" text="Done" />
+         </children>
+      </VBox>
+      <VBox fx:id="forgot_pass_view" layoutX="769.0" layoutY="284.0" opacity="0.63" prefHeight="200.0" prefWidth="205.0" visible="false">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password Details" wrappingWidth="205.13671875">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Text>
+            <TextField fx:id="forgot_sQuestion" alignment="TOP_CENTER" editable="false" />
+            <TextField fx:id="forgot_sAnswer" alignment="TOP_CENTER" />
+            <TextField fx:id="forgot_pass" alignment="TOP_CENTER" />
+            <PasswordField fx:id="forgot_ChangePass" alignment="TOP_CENTER" />
+            <Button mnemonicParsing="false" onAction="#show_Change_pass" prefHeight="29.0" prefWidth="205.0" text="Show/Change Password" />
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>
